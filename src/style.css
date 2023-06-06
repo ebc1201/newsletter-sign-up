@@ -20,13 +20,29 @@ h1 {
 }
 
 .fa-circle-check {
-  color: hsl(4, 94%, 67%);
+  color: hsl(4, 100%, 67%);
   padding-right: 10px;
 }
 
+.btn:focus,
+.form-control:focus {
+  box-shadow: none;
+}
+
 .btn-primary {
-  background-color: hsl(233, 31%, 20%);
+  background: hsla(233, 31%, 20%) 0%;
   padding: 15px 60px;
+  border: none;
+  transition: all 1s ease-in-out;
+}
+
+.btn-primary:hover,
+.btn-primary:active {
+  background: linear-gradient(
+    90deg,
+    hsla(4, 100%, 67%, 1) 0%,
+    hsla(347, 100%, 66%, 1) 100%
+  );
 }
 
 .form-label {
