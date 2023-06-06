@@ -1,6 +1,6 @@
 body {
   font-family: 'Roboto', sans-serif;
-  background-color: hsl(234, 29%, 20%);
+  background-color: hsl(235, 18%, 26%);
 }
 
 h1 {
@@ -24,29 +24,37 @@ h1 {
   padding-right: 10px;
 }
 
+.btn-primary {
+  display: block;
+  width: 100%;
+}
+
 .btn:focus,
 .form-control:focus {
+  border: 1px solid hsl(235, 18%, 26%);
   box-shadow: none;
 }
 
 .btn-primary {
   background: hsla(233, 31%, 20%) 0%;
-  padding: 15px 60px;
+  padding: 15px;
   border: none;
-  transition: all 1s ease-in-out;
+  transition: all 200ms ease-in-out;
 }
 
 .btn-primary:hover,
 .btn-primary:active {
   background: linear-gradient(
     90deg,
-    hsla(4, 100%, 67%, 1) 0%,
-    hsla(347, 100%, 66%, 1) 100%
+    hsla(347, 100%, 66%, 1) 0%,
+    hsla(4, 100%, 67%) 100%
   );
+  box-shadow: 1px 12px 21px 3px rgba(255, 98, 87, 0.33);
 }
 
 .form-label {
   font-weight: 700;
+  font-size: 14px;
 }
 
 img {
