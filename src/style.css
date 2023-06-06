@@ -1,0 +1,23 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: hsl(234, 29%, 20%);
+}
+
+h1 {
+  font-weight: 700;
+}
+.container {
+  max-width: 900px;
+  background-color: hsl(0, 0%, 100%);
+  padding: 20px;
+  margin: 50 auto;
+  border-radius: 25px;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
