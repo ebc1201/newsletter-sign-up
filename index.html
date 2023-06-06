@@ -24,25 +24,35 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <script
+      src="https://kit.fontawesome.com/2e073ff919.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="src/style.css" />
 
     <title>Newsletter sign-up form with success message</title>
   </head>
   <body>
     <!-- Sign-up form start -->
-    <div class="container">
+    <div
+      class="container h-100 d-flex justify-content-center align-items-center"
+    >
       <div class="row">
-        <div class="col-md-6 col-lg-6 mt-5">
+        <div class="col-md-6 col-lg-6 pe-3 stay-tuned">
           <h1>Stay updated!</h1>
           <p>Join 60,000+ product managers receiving monthly updates on:</p>
-          <ul class="bullets">
-            <li>Product discovery and building what matters</li>
-            <li>Measuring to ensure updates are a success</li>
-            <li>And much more!</li>
-          </ul>
+
+          <i class="fa-solid fa-circle-check"></i>
+          <span>Product discovery and building what matters</span>
+          <br />
+          <i class="fa-solid fa-circle-check"></i>
+          <span>Measuring to ensure updates are a success</span>
+          <br />
+          <i class="fa-solid fa-circle-check">test</i>
+          <span>And much more!</span>
 
           <!-- Sign-up form end -->
-          <form>
+          <form class="mt-5">
             <div class="mb-3">
               <label for="exampleInputEmail1" class="form-label"
                 >Email address</label
@@ -61,7 +71,7 @@
           </form>
         </div>
 
-        <div class="col-md-6 col-lg-6 mt-5">
+        <div class="col-md-6 col-lg-6 ps-5 img-fluid">
           <img src="assets/images/illustration-sign-up-desktop.svg" />
         </div>
       </div>
