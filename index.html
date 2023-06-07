@@ -34,9 +34,7 @@
   </head>
   <body>
     <!-- Sign-up form start -->
-    <div
-      class="container h-100 d-flex justify-content-center align-items-center"
-    >
+    <div class="container hide">
       <div class="row">
         <div class="col-md-6 col-lg-6 pe-3 stay-tuned">
           <h1 class="mb-3">Stay updated!</h1>
@@ -52,7 +50,7 @@
           <span>And much more!</span>
 
           <!-- Sign-up form end -->
-          <form class="mt-5">
+          <form class="mt-5 needs-validation" novalidate>
             <div class="mb-3">
               <label for="exampleInputEmail1" class="form-label"
                 >Email address</label
@@ -60,11 +58,13 @@
               <input
                 type="email"
                 class="form-control"
-                id="exampleInputEmail1"
+                id="emailValidation"
                 aria-describedby="emailHelp"
                 placeholder="email@company.com"
               />
+              <div class="invalid-feedback">Valid email required</div>
             </div>
+
             <button type="submit" class="btn btn-primary">
               Subscribe to monthly newsletter
             </button>
@@ -78,10 +78,15 @@
     </div>
 
     <!-- Success message start -->
-
-    <!--Thanks for subscribing! A confirmation email has been sent to
-    ash@loremcompany.com. Please open it and click the button inside to confirm
-    your subscription. Dismiss message -->
+    <div class="success">
+      <i class="fa-solid fa-circle-check"></i>
+      <h1 class="mb-4">Thanks for subscribing!</h1>
+      <p class="mb-5">
+        A confirmation email has been sent to ash@loremcompany.com. Please open
+        it and click the button inside to confirm your subscription.
+      </p>
+      <button type="submit" class="btn btn-primary">Dismiss message</button>
+    </div>
 
     <!-- Success message end -->
 
@@ -96,5 +101,6 @@
         >Erica Chambers</a
       >.
     </div>
+    <script src="./src/script.js"></script>
   </body>
 </html>
