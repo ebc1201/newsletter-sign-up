@@ -1,6 +1,11 @@
 const form = document.querySelector('form');
+const container = document.querySelector('.container');
+const success = document.querySelector('.success');
+
 form.addEventListener('submit', (event) => {
   event.preventDefault();
+  container.classList.add('hide');
+  success.classList.remove('hide');
 });
 
 (() => {
