@@ -1,32 +1,27 @@
-// Example starter JavaScript for disabling form submissions if there are invalid fields
 (function () {
   'use strict';
 
-  // Fetch all the forms we want to apply custom Bootstrap validation styles to
-  var forms = document.querySelectorAll('.needs-validation');
+  var form = document.querySelector('.needs-validation');
+  var emailInput = document.getElementById('emailInput');
 
-  // Loop over them and prevent submission
-  Array.prototype.slice.call(forms).forEach(function (form) {
-    form.addEventListener(
-      'submit',
-      function (event) {
-        if (!form.checkValidity()) {
-          event.preventDefault();
-          event.stopPropagation();
-          const successForm = document.querySelector('form');
-          const container = document.querySelector('.container');
-          const success = document.querySelector('.success');
+  form.addEventListener('submit', function (event) {
+    event.preventDefault(); // Prevent form submission
 
-          successForm.addEventListener('submit', (event) => {
-            event.preventDefault();
-            container.classList.add('hide');
-            success.classList.remove('hide');
-          });
-        }
+    if (!form.checkValidity()) {
+      event.stopPropagation();
+      form.classList.add('was-validated');
+    } else {
+      const container = document.querySelector('.container');
+      const successContainer = document.querySelector('.success');
 
-        form.classList.add('was-validated');
-      },
-      false
-    );
+      container.classList.add('hide');
+      successContainer.classList.remove('hide');
+
+      var email = emailInput.value;
+
+      localStorage.setItem('email', email);
+
+      document.getElementById('userEmail').textContent = email;
+    }
   });
 })();

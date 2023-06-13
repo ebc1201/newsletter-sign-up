@@ -83,7 +83,7 @@ h1 {
   font-size: 14px;
 }
 
-img {
+.desktop-img {
   max-width: 100%;
 }
 
@@ -100,4 +100,56 @@ img {
 .attribution a {
   color: hsl(228, 45%, 44%);
   text-decoration: none;
+}
+
+/* Media queries */
+
+@media all and (min-width: 480px) and (max-width: 767px) {
+  body {
+    background-color: white;
+  }
+
+  .desktop-img {
+    display: none;
+  }
+
+  .mobile-img {
+    padding: 0;
+    margin: 0;
+  }
+
+  .container {
+    padding: 30px;
+    border-radius: 0;
+    margin-top: 0;
+  }
+}
+
+@media all and (min-width: 768px) {
+  .mobile-img {
+    display: none;
+  }
+}
+
+@media all and (max-width: 480px) {
+  body {
+    background-color: white;
+  }
+
+  .desktop-img {
+    display: none;
+  }
+
+  .mobile-img {
+    padding: 0;
+    margin: 0;
+    display: block;
+    justify-content: center;
+  }
+
+  .container {
+    padding: 30px;
+    border-radius: 0;
+    margin-top: 0;
+  }
 }
